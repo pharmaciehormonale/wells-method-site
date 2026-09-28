@@ -15,12 +15,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Wells Method | Optimisation Hormonale Naturelle",
   description: "Transformez votre corps et votre énergie grâce à l'optimisation hormonale naturelle. Perdez du gras, gagnez en vitalité et améliorez votre sommeil.",
-  keywords: "optimisation hormonale, coaching santé, perte de poids, vitalité, sommeil, compléments naturels",
+  keywords: "optimisation hormonale, coaching santé, perte de poids, vitalité, sommeil, compléments naturels, David Wells",
+  authors: [{ name: "David Wells" }],
   openGraph: {
     title: "Wells Method | Optimisation Hormonale Naturelle",
     description: "Transformez votre corps et votre énergie grâce à l'optimisation hormonale naturelle.",
     type: "website",
     locale: "fr_FR",
+    siteName: "Wells Method",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wells Method | Optimisation Hormonale Naturelle",
+    description: "Transformez votre corps et votre énergie grâce à l'optimisation hormonale naturelle.",
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
@@ -32,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

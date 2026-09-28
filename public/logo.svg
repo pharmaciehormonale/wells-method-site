@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- W stylisé premium -->
+  <path d="M10 15 L22 45 L34 25 L46 45 L58 15" stroke="#b8860b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Ligne dorée décorative sous le W -->
+  <line x1="10" y1="50" x2="58" y2="50" stroke="url(#goldGradient)" stroke-width="1.5"/>
+  
+  <!-- Texte WELLS METHOD -->
+  <text x="70" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" letter-spacing="0.15em" fill="#0a0a0a">WELLS</text>
+  <text x="70" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" letter-spacing="0.3em" fill="#737373">METHOD</text>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8860b"/>
+      <stop offset="50%" stop-color="#d4a853"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+  </defs>
+</svg>
