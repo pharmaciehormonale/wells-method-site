@@ -6,6 +6,14 @@ import CalendlyWidget from "@/components/CalendlyWidget";
 import QuestionnairePopup from "@/components/QuestionnairePopup";
 import BookMockup from "@/components/BookMockup";
 
+// Avatar photos for social proof
+const avatars = [
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+];
+
 export default function Home() {
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
   const [hasSeenPopup, setHasSeenPopup] = useState(false);
@@ -90,12 +98,19 @@ export default function Home() {
                 </button>
               </div>
               
-              {/* Trust Indicators */}
+              {/* Trust Indicators with real photos */}
               <div className="flex items-center gap-8 pt-8 animate-fade-in-up delay-400">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 border-2 border-white" />
+                    {avatars.map((src, i) => (
+                      <Image
+                        key={i}
+                        src={src}
+                        alt={`Client ${i + 1}`}
+                        width={32}
+                        height={32}
+                        className="w-8 h-8 rounded-full border-2 border-white object-cover"
+                      />
                     ))}
                   </div>
                   <span className="text-sm text-gray-600">+200 clients transformés</span>
@@ -135,7 +150,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-[#b8860b] text-sm font-medium tracking-widest uppercase">Le Problème</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 gradient-text">
-              Vos hormones vous freinent
+              Votre corps vous envoie des signaux
             </h2>
             <p className="text-xl text-gray-600">
               Fatigue chronique, prise de poids inexpliquée, sommeil perturbé... 
@@ -188,21 +203,6 @@ export default function Home() {
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-              
-              {/* Floating Card */}
-              <div className="absolute -bottom-6 -right-6 glass rounded-xl p-6 shadow-xl max-w-[250px]">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#b8860b] to-[#d4a853] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="font-semibold">Certifié</span>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Expert en optimisation hormonale & nutrition fonctionnelle
-                </p>
-              </div>
             </div>
             
             {/* Content */}
@@ -216,13 +216,13 @@ export default function Home() {
                 {[
                   {
                     step: "01",
-                    title: "Analyse complète",
-                    description: "Bilan hormonal approfondi via vos analyses sanguines"
+                    title: "Évaluation complète",
+                    description: "Questionnaire approfondi sur votre mode de vie, vos symptômes et vos objectifs"
                   },
                   {
                     step: "02",
                     title: "Stratégie sur mesure",
-                    description: "Plan personnalisé adapté à votre profil unique"
+                    description: "Plan personnalisé adapté à votre profil unique et vos besoins spécifiques"
                   },
                   {
                     step: "03",
@@ -262,7 +262,7 @@ export default function Home() {
               Imaginez-vous dans <span className="text-[#d4a853]">90 jours</span>
             </h2>
             <p className="text-xl text-gray-400">
-              Des hormones optimisées, c'est un corps en mode performance maximale.
+              Un équilibre retrouvé, c'est un corps en mode performance maximale.
             </p>
           </div>
           
@@ -315,19 +315,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: "🔬",
-                title: "Analyse hormonale",
-                description: "Bilan complet de vos hormones clés : thyroïde, testostérone, œstrogènes, cortisol, insuline."
+                icon: "📋",
+                title: "Évaluation personnalisée",
+                description: "Questionnaire détaillé sur vos habitudes, symptômes et objectifs pour comprendre votre profil unique."
               },
               {
                 icon: "🎯",
                 title: "Stratégie ciblée",
-                description: "Plan d'action personnalisé pour rééquilibrer votre système hormonal naturellement."
+                description: "Plan d'action personnalisé pour rééquilibrer votre système naturellement."
               },
               {
                 icon: "🥗",
                 title: "Nutrition adaptée",
-                description: "Alimentation optimisée pour soutenir vos hormones et atteindre vos objectifs."
+                description: "Alimentation optimisée pour soutenir votre métabolisme et atteindre vos objectifs."
               },
               {
                 icon: "💪",

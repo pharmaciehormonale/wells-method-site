@@ -9,15 +9,12 @@ export default function BookMockup() {
           
           {/* Main Title */}
           <div className="text-center space-y-4 mt-8">
-            <div className="text-[#b8860b] text-xs tracking-[0.4em] font-light">
-              LA MÉTHODE
+            <div className="text-[#b8860b] text-xs tracking-[0.4em] font-light uppercase">
+              La Méthode
             </div>
-            <h3 className="text-white text-3xl font-bold tracking-wide">
+            <h3 className="text-white text-4xl font-bold tracking-wide">
               WELLS
             </h3>
-            <h4 className="text-white text-lg font-light tracking-[0.2em]">
-              METHOD
-            </h4>
             
             {/* Divider */}
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#b8860b] to-transparent mx-auto my-6" />
