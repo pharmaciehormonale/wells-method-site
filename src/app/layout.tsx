@@ -42,6 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="facebook-domain-verification" content="kn66hf0j4bxo94u8zehozr29h72sro" />
         <link rel="preconnect" href="https://assets.calendly.com" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
